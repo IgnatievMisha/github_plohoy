@@ -19,7 +19,7 @@ def ryadki(*args):
         if int(j)>maxi:
             maxi=int(j)
     print(maxi)
-ryadki("abc", "defg", "hijkl", "mnopqrstuvw")
+ryadki("abc", "defg", "hijkl", "moidshf;hg")
 
 #3
 b=[]
@@ -31,3 +31,10 @@ ryadki("abc", "defg", "hijkl", "mnopqrstuvw")
 
 #4
 people=[('nikita', 15), ('ludina', 45), ('gleb', 1)]
+def create_dict(*args):
+    name_age={}
+    if args:
+        for name, age in args:
+            name_age[name]=age
+    return name_age
+print(create_dict(people))
