@@ -38,3 +38,60 @@ def create_dict(*args):
             name_age[name]=age
     return name_age
 print(create_dict(people))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Animal:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+    def eat(self):
+        print(self.name, "eating")
+class Dog(Animal):
+    def __init__(self, name, age, breed):
+        super().__init__(name, age)
+        self.breed=breed
+    def bark(self):
+        print(self.name, 'barking')
+hotdog=Dog("bobik", 3, 'blablador')
+print(hotdog.name)
+print(hotdog.age)
+print(hotdog.breed)
+hotdog.eat()
+
+class Person:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+    def __str__(self):
+        return f'Name {self.name}, age {self.age}'
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id=student_id
+    def __str__(self):
+        return super().__str__()+f" student_id {self.student_id}"
+student1=Student("mama", 21, 777)
+with open('info_student.txt', 'w') as file:
+    file.write(str(student1))
